@@ -7,21 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_campaign_day_interaction
+
+    [Table("T_CAMPAIGN_DAY_INTERACTION")]
+    public partial class T_CAMPAIGN_DAY_INTERACTION : BaseElement
     {
-        public long id { get; set; }
-        public long id_campaign_session { get; set; }
-        public long id_campaign_day { get; set; }
+        [Column("TYPE")]
         public long type { get; set; }
+
+        [Column("CARD")]
         public string card { get; set; }
-    
-        public virtual t_base_element t_base_element { get; set; }
-        public virtual t_campaign_day t_campaign_day { get; set; }
-        public virtual t_campaign_session t_campaign_session { get; set; }
+
+        [Column("ID_CAMPAIGN_DAY")]
+        public virtual T_CAMPAIGN_DAY T_CAMPAIGN_DAY { get; set; }
+
+        [Column("ID_CAMPAIGN_SESSION")]
+        public virtual T_CAMPAIGN_SESSION T_CAMPAIGN_SESSION { get; set; }
     }
 }

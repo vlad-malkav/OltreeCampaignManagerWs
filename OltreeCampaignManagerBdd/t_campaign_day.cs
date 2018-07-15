@@ -7,33 +7,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class t_campaign_day
+    [Table("T_CAMPAIGN_DAY")]
+    public partial class T_CAMPAIGN_DAY : BaseElement
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public t_campaign_day()
+        public T_CAMPAIGN_DAY()
         {
-            this.t_campaign_day_interaction = new HashSet<t_campaign_day_interaction>();
+            this.T_CAMPAIGN_DAY_INTERACTION = new HashSet<T_CAMPAIGN_DAY_INTERACTION>();
         }
-    
-        public long id { get; set; }
+
+
+        [Column("USABLE_RESSOURCES_CAPACITY")]
         public long usable_ressources_capacity { get; set; }
+
+        [Column("USABLE_RESSOURCES_CARRIED")]
         public long usable_ressources_carried { get; set; }
+
+        [Column("IMMOBILISED_RESSOURCES_CARRIED")]
         public long immobilised_ressources_carried { get; set; }
+
+        [Column("GOODS_CARRIED")]
         public string goods_carried { get; set; }
+
+        [Column("WEATHER")]
         public string weather { get; set; }
+
+        [Column("DAY")]
         public long day { get; set; }
+
+        [Column("WEEK")]
         public long week { get; set; }
+
+        [Column("MONTH")]
         public long month { get; set; }
+
+        [Column("YEAR")]
         public int year { get; set; }
+
+        [Column("RESSOURCES_EVOLUTION")]
         public string ressources_evolution { get; set; }
-    
-        public virtual t_base_element t_base_element { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_campaign_day_interaction> t_campaign_day_interaction { get; set; }
+        public virtual ICollection<T_CAMPAIGN_DAY_INTERACTION> T_CAMPAIGN_DAY_INTERACTION { get; set; }
     }
 }

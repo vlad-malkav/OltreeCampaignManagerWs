@@ -14,35 +14,42 @@ namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_base_element
+
+    [Table("T_BASE_ELEMENT")]
+    public partial class BaseElement
     {
         [Key]
-        [Column("Name")]
+        [Column("ID")]
         public long id { get; set; }
 
+        [Column("ID_CAMPAIGN")]
         public long id_campaign { get; set; }
 
+        [Column("DESCRIPTION")]
         public string description { get; set; }
 
+        [Column("NOTES")]
         public string notes { get; set; }
 
+        [Column("DESCRIPTION_MD")]
         public string description_md { get; set; }
 
+        [Column("NOTES_MD")]
         public string notes_md { get; set; }
 
+        [Column("TYPE")]
         public int type { get; set; }
     
-        public virtual t_campaign t_campaign { get; set; }
-        public virtual t_hexagon t_hexagon { get; set; }
-        public virtual t_npc t_npc { get; set; }
-        public virtual t_place t_place { get; set; }
-        public virtual t_faction t_faction { get; set; }
-        public virtual t_community_theme t_community_theme { get; set; }
-        public virtual t_campaign_session t_campaign_session { get; set; }
-        public virtual t_campaign_day t_campaign_day { get; set; }
-        public virtual t_campaign_day_interaction t_campaign_day_interaction { get; set; }
-        public virtual t_rumor t_rumor { get; set; }
-        public virtual t_monster t_monster { get; set; }
+        /*public virtual T_CAMPAIGN T_CAMPAIGN { get; set; }
+        public virtual T_HEXAGON T_HEXAGON { get; set; }
+        public virtual T_NPC T_NPC { get; set; }
+        public virtual T_PLACE T_PLACE { get; set; }
+        public virtual T_FACTION T_FACTION { get; set; }
+        public virtual T_COMMUNITY_THEME T_COMMUNITY_THEME { get; set; }
+        public virtual T_CAMPAIGN_SESSION T_CAMPAIGN_SESSION { get; set; }
+        public virtual T_CAMPAIGN_DAY T_CAMPAIGN_DAY { get; set; }
+        public virtual T_CAMPAIGN_DAY_INTERACTION T_CAMPAIGN_DAY_INTERACTION { get; set; }
+        public virtual T_RUMOR T_RUMOR { get; set; }
+        public virtual T_MONSTER T_MONSTER { get; set; }*/
     }
 }

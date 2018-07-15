@@ -7,28 +7,39 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_faction
+
+    [Table("T_FACTION")]
+    public partial class T_FACTION : BaseElement
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public t_faction()
+        public T_FACTION()
         {
-            this.t_community_theme = new HashSet<t_community_theme>();
+            this.T_COMMUNITY_THEME = new HashSet<T_COMMUNITY_THEME>();
         }
-    
-        public long id { get; set; }
+
+        [Column("BASE")]
         public string @base { get; set; }
+
+        [Column("OBJECTIF")]
         public int objectif { get; set; }
+
+        [Column("DYNAMIQUE")]
         public int dynamique { get; set; }
+
+        [Column("CHRONIQUE")]
         public string chronique { get; set; }
+
+        [Column("MOTIVATION")]
         public int motivation { get; set; }
-    
-        public virtual t_base_element t_base_element { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_community_theme> t_community_theme { get; set; }
+        public virtual ICollection<T_COMMUNITY_THEME> T_COMMUNITY_THEME { get; set; }
     }
 }

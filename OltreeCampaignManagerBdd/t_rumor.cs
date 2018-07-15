@@ -7,18 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_rumor
+
+    [Table("T_RUMOR")]
+    public partial class T_RUMOR : BaseElement
     {
-        public long id { get; set; }
-        public Nullable<long> id_hexagon { get; set; }
+        [Column("VERACITY")]
         public long veracity { get; set; }
-    
-        public virtual t_base_element t_base_element { get; set; }
-        public virtual t_hexagon t_hexagon { get; set; }
+
+        [Column("ID_HEXAGON")]
+        public virtual T_HEXAGON T_HEXAGON { get; set; }
     }
 }

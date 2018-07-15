@@ -5,19 +5,19 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="b3ca6b28c542424e85c0842ee51187d3" Name="Diagram1">
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_base_element" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_campaign" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_campaign_day" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_campaign_day_interaction" Width="1.5" PointX="7.5" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_campaign_session" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_community" Width="1.5" PointX="7.5" PointY="19" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_community_theme" Width="1.5" PointX="9.75" PointY="16.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_faction" Width="1.5" PointX="13" PointY="14.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_hexagon" Width="1.5" PointX="7.5" PointY="13.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_monster" Width="1.5" PointX="9.75" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_npc" Width="1.5" PointX="10.5" PointY="14.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_place" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="OltreeCampaignManagerModel.t_rumor" Width="1.5" PointX="12.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_BASE_ELEMENT" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_CAMPAIGN" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_CAMPAIGN_DAY" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_CAMPAIGN_DAY_INTERACTION" Width="1.5" PointX="7.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_CAMPAIGN_SESSION" Width="1.5" PointX="5.25" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_COMMUNITY" Width="1.5" PointX="7.5" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_COMMUNITY_THEME" Width="1.5" PointX="9.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_FACTION" Width="1.5" PointX="13" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_HEXAGON" Width="1.5" PointX="7.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_MONSTER" Width="1.5" PointX="9.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_NPC" Width="1.5" PointX="10.5" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_PLACE" Width="1.5" PointX="5.25" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OltreeCampaignManagerModel.T_RUMOR" Width="1.5" PointX="12.75" PointY="11.5" IsExpanded="true" />
         <AssociationConnector Association="OltreeCampaignManagerModel.FK_128" ManuallyRouted="false" />
         <AssociationConnector Association="OltreeCampaignManagerModel.FK_140" ManuallyRouted="false" />
         <AssociationConnector Association="OltreeCampaignManagerModel.FK_153" ManuallyRouted="false" />
@@ -35,9 +35,9 @@
         <AssociationConnector Association="OltreeCampaignManagerModel.FK_235" ManuallyRouted="false" />
         <AssociationConnector Association="OltreeCampaignManagerModel.FK_321" ManuallyRouted="false" />
         <AssociationConnector Association="OltreeCampaignManagerModel.FK_335" ManuallyRouted="false" />
-        <AssociationConnector Association="OltreeCampaignManagerModel.t_community_theme_factions" ManuallyRouted="false" />
-        <AssociationConnector Association="OltreeCampaignManagerModel.t_place_hexagons" ManuallyRouted="false" />
-        <AssociationConnector Association="OltreeCampaignManagerModel.t_place_npcs" ManuallyRouted="false" />
+        <AssociationConnector Association="OltreeCampaignManagerModel.T_COMMUNITY_THEME_factions" ManuallyRouted="false" />
+        <AssociationConnector Association="OltreeCampaignManagerModel.T_PLACE_hexagons" ManuallyRouted="false" />
+        <AssociationConnector Association="OltreeCampaignManagerModel.T_PLACE_npcs" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -7,25 +7,32 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_campaign_session
+
+    [Table("T_CAMPAIGN_SESSION")]
+    public partial class T_CAMPAIGN_SESSION : BaseElement
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public t_campaign_session()
+        public T_CAMPAIGN_SESSION()
         {
-            this.t_campaign_day_interaction = new HashSet<t_campaign_day_interaction>();
+            this.T_CAMPAIGN_DAY_INTERACTION = new HashSet<T_CAMPAIGN_DAY_INTERACTION>();
         }
-    
-        public long id { get; set; }
+
+
+        [Column("DATE")]
         public System.DateTime date { get; set; }
+
+        [Column("PLAYERS")]
         public string players { get; set; }
-    
-        public virtual t_base_element t_base_element { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_campaign_day_interaction> t_campaign_day_interaction { get; set; }
+        public virtual ICollection<T_CAMPAIGN_DAY_INTERACTION> T_CAMPAIGN_DAY_INTERACTION { get; set; }
     }
 }

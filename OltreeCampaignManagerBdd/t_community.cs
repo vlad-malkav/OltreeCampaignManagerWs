@@ -7,28 +7,41 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_community
+
+    [Table("T_COMMUNITY")]
+    public partial class T_COMMUNITY : T_PLACE
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public t_community()
+        public T_COMMUNITY()
         {
-            this.t_community_theme = new HashSet<t_community_theme>();
+            this.T_COMMUNITY_THEME = new HashSet<T_COMMUNITY_THEME>();
         }
-    
-        public long id { get; set; }
+
+
+        [Column("RELATION_PATROL_LEVEL")]
         public long relation_patrol_level { get; set; }
+
+        [Column("SIZE")]
         public int size { get; set; }
+
+        [Column("PEOPLE_MAIN_TYPE")]
         public int people_main_type { get; set; }
+
+        [Column("TYPE")]
         public string type { get; set; }
+
+        [Column("ADDITIONAL_TYPE_DATA")]
         public string additional_type_data { get; set; }
-    
-        public virtual t_place t_place { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_community_theme> t_community_theme { get; set; }
+        public virtual ICollection<T_COMMUNITY_THEME> T_COMMUNITY_THEME { get; set; }
     }
 }

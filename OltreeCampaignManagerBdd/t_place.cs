@@ -7,28 +7,35 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_place
+
+    [Table("T_PLACE")]
+    public partial class T_PLACE : BaseElement
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public t_place()
+        public T_PLACE()
         {
-            this.t_hexagon = new HashSet<t_hexagon>();
-            this.t_npc = new HashSet<t_npc>();
+            this.T_HEXAGON = new HashSet<T_HEXAGON>();
+            this.T_NPC = new HashSet<T_NPC>();
         }
-    
-        public long id { get; set; }
+
+        [Column("TYPE")]
         public int type { get; set; }
-    
-        public virtual t_base_element t_base_element { get; set; }
-        public virtual t_community t_community { get; set; }
+
+        [Column("ID_COMMUNITY")]
+        public virtual T_COMMUNITY T_COMMUNITY { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_hexagon> t_hexagon { get; set; }
+        public virtual ICollection<T_HEXAGON> T_HEXAGON { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_npc> t_npc { get; set; }
+        public virtual ICollection<T_NPC> T_NPC { get; set; }
     }
 }

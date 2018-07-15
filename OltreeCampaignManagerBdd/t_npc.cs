@@ -7,24 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_npc
+
+    [Table("T_NPC")]
+    public partial class T_NPC : BaseElement
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public t_npc()
+        public T_NPC()
         {
-            this.t_place = new HashSet<t_place>();
+            this.T_PLACE = new HashSet<T_PLACE>();
         }
-    
+
+        [Column("NAME")]
         public string name { get; set; }
-        public long id { get; set; }
-    
-        public virtual t_base_element t_base_element { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_place> t_place { get; set; }
+        public virtual ICollection<T_PLACE> T_PLACE { get; set; }
     }
 }

@@ -25,18 +25,18 @@ namespace OltreeCampaignManagerBdd
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<t_base_element> t_base_element { get; set; }
-        public virtual DbSet<t_campaign> t_campaign { get; set; }
-        public virtual DbSet<t_campaign_day> t_campaign_day { get; set; }
-        public virtual DbSet<t_campaign_day_interaction> t_campaign_day_interaction { get; set; }
-        public virtual DbSet<t_campaign_session> t_campaign_session { get; set; }
-        public virtual DbSet<t_community> t_community { get; set; }
-        public virtual DbSet<t_community_theme> t_community_theme { get; set; }
-        public virtual DbSet<t_faction> t_faction { get; set; }
-        public virtual DbSet<t_hexagon> t_hexagon { get; set; }
-        public virtual DbSet<t_monster> t_monster { get; set; }
-        public virtual DbSet<t_npc> t_npc { get; set; }
-        public virtual DbSet<t_place> t_place { get; set; }
-        public virtual DbSet<t_rumor> t_rumor { get; set; }
+        public virtual DbSet<BaseElement> T_BASE_ELEMENT { get; set; }
+        public virtual DbSet<Campaign> T_CAMPAIGN { get; set; }
+        public virtual DbSet<T_CAMPAIGN_DAY> T_CAMPAIGN_DAY { get; set; }
+        public virtual DbSet<T_CAMPAIGN_DAY_INTERACTION> T_CAMPAIGN_DAY_INTERACTION { get; set; }
+        public virtual DbSet<T_CAMPAIGN_SESSION> T_CAMPAIGN_SESSION { get; set; }
+        public virtual DbSet<T_COMMUNITY> T_COMMUNITY { get; set; }
+        public virtual DbSet<T_COMMUNITY_THEME> T_COMMUNITY_THEME { get; set; }
+        public virtual DbSet<T_FACTION> T_FACTION { get; set; }
+        public virtual DbSet<T_HEXAGON> T_HEXAGON { get; set; }
+        public virtual DbSet<T_MONSTER> T_MONSTER { get; set; }
+        public virtual DbSet<T_NPC> T_NPC { get; set; }
+        public virtual DbSet<T_PLACE> T_PLACE { get; set; }
+        public virtual DbSet<T_RUMOR> T_RUMOR { get; set; }
     }
 }

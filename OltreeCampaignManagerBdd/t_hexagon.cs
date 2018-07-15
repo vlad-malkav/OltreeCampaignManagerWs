@@ -7,33 +7,46 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_hexagon
+
+    [Table("T_HEXAGON")]
+    public partial class T_HEXAGON : BaseElement
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public t_hexagon()
+        public T_HEXAGON()
         {
-            this.t_rumor = new HashSet<t_rumor>();
-            this.t_monster = new HashSet<t_monster>();
-            this.t_place = new HashSet<t_place>();
+            this.T_RUMOR = new HashSet<T_RUMOR>();
+            this.T_MONSTER = new HashSet<T_MONSTER>();
+            this.T_PLACE = new HashSet<T_PLACE>();
         }
-    
-        public long id { get; set; }
+
+        [Column("COLUMN")]
         public long column { get; set; }
+
+        [Column("ROW")]
         public long row { get; set; }
+
+        [Column("EXPLORATION_LEVEL")]
         public long exploration_level { get; set; }
+
+        [Column("ID_LAND_TYPE")]
         public long id_land_type { get; set; }
-    
-        public virtual t_base_element t_base_element { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_rumor> t_rumor { get; set; }
+        public virtual ICollection<T_RUMOR> T_RUMOR { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_monster> t_monster { get; set; }
+        public virtual ICollection<T_MONSTER> T_MONSTER { get; set; }
+
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_place> t_place { get; set; }
+        public virtual ICollection<T_PLACE> T_PLACE { get; set; }
     }
 }

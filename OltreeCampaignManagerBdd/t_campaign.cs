@@ -7,24 +7,35 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_campaign
+
+    [Table("T_CAMPAIGN")]
+    public partial class Campaign
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public t_campaign()
+        public Campaign()
         {
-            this.t_base_element = new HashSet<t_base_element>();
+            this.T_BASE_ELEMENT = new HashSet<BaseElement>();
         }
-    
+
+        [Key]
+        [Column("ID")]
         public long id { get; set; }
+
+        [Column("NAME")]
         public string name { get; set; }
+
+        [Column("DESCRIPTION")]
         public string description { get; set; }
-    
+        
+        [Column("TODO")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<t_base_element> t_base_element { get; set; }
+        public virtual ICollection<BaseElement> T_BASE_ELEMENT { get; set; }
     }
 }

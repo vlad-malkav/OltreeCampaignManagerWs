@@ -7,18 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace OltreeCampaignManagerBdd
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class t_monster
+
+    [Table("T_MONSTER")]
+    public partial class T_MONSTER : BaseElement
     {
-        public long id { get; set; }
-        public long id_hexagon { get; set; }
+        [Column("NAME")]
         public string name { get; set; }
-    
-        public virtual t_base_element t_base_element { get; set; }
-        public virtual t_hexagon t_hexagon { get; set; }
+
+        [Column("ID_HEXAGON")]
+        public virtual T_HEXAGON T_HEXAGON { get; set; }
     }
 }
