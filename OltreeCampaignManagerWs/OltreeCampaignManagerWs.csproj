@@ -80,9 +80,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="OltreeCampaignManagerWs.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OltreeCampaignManagerWs.asmx.cs">
+      <DependentUpon>OltreeCampaignManagerWs.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,6 +98,12 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OltreeCampaignManagerBdd\OltreeCampaignManagerBdd.csproj">
+      <Project>{4e604817-7f49-4dca-9faf-714f51294610}</Project>
+      <Name>OltreeCampaignManagerBdd</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

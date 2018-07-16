@@ -55,85 +55,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="OltreeCampaignManagerModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OltreeCampaignManagerModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OltreeCampaignManagerModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OltreeCampaignManagerModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OltreeCampaignManagerModel.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="OltreeCampaignManagerDbContext.cs" />
+    <Compile Include="Models\CampaignSession.cs" />
+    <Compile Include="Models\Community.cs" />
+    <Compile Include="Models\CampaignDayInteraction.cs" />
+    <Compile Include="Models\CampaignDay.cs" />
+    <Compile Include="Models\Campaign.cs" />
+    <Compile Include="Models\Hexagon.cs" />
+    <Compile Include="Models\Faction.cs" />
+    <Compile Include="Models\Npc.cs" />
+    <Compile Include="Models\Place.cs" />
+    <Compile Include="Models\Monster.cs" />
+    <Compile Include="Models\CommunityTheme.cs" />
+    <Compile Include="Models\BaseElement.cs" />
+    <Compile Include="Models\Rumor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="t_base_element.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_campaign.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_campaign_day.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_campaign_day_interaction.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_campaign_session.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_community.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_community_theme.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_faction.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_hexagon.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_monster.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_npc.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_place.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="t_rumor.cs">
-      <DependentUpon>OltreeCampaignManagerModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <EntityDeploy Include="OltreeCampaignManagerModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>OltreeCampaignManagerModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="OltreeCampaignManagerModel.edmx.diagram">
-      <DependentUpon>OltreeCampaignManagerModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="OltreeCampaignManagerModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OltreeCampaignManagerModel.edmx</DependentUpon>
-      <LastGenOutput>OltreeCampaignManagerModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="OltreeCampaignManagerModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>OltreeCampaignManagerModel.edmx</DependentUpon>
-      <LastGenOutput>OltreeCampaignManagerModel.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
